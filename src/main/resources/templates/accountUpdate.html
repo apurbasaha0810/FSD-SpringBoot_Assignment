@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Account update page</title>
+<h2>Update Password</h2>
+<table>
+
+	<thead>Menu
+	</thead>
+	<br>
+	<tr>
+		<a th:href="@{/logout}">logout</a>
+	</tr>
+	<br>
+	<tr>
+		<a th:href="@{/update}">Account update</a>
+	</tr>
+	<br>
+	<form action="#" th:action="@{/update}" th:object="${userModel}"
+		method="post">
+		<tr>
+			<p>
+				Name: <input type="text" th:field="*{name}" />
+		</tr>
+		</p>
+		<tr>
+			<p>
+				Email ID: <input type="text" th:field="*{email}" />
+			</p>
+		</tr>
+
+		<tr>
+			Username:
+			<input type="text" value="Enter username" th:field="*{userId}" />
+		</tr>
+		<p></p>
+		<tr>
+			Password:
+			<input type="password" value="Enter password" th:field="*{password}" />
+		</tr>
+		<p></p>
+		<tr>
+			Re-enter Password:
+			<input type="password" value="Re-Enter password"
+				th:field="*{password}" />
+		</tr>
+		<p></p>
+
+		<input type="submit" value="Update"></input>
+		<p></p>
+
+	</form>
+</table>
+
+</head>
+<body>
+
+	<!-- <p th:text="'id: ' + ${greeting.id}" />-->
+</body>
+</html>
