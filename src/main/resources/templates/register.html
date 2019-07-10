@@ -1,0 +1,47 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Welcome to User Registration Page</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../../css/myStyles.css" th:href="@{/css/myStyles.css}" />
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body>
+	<h2>Welcome to user registration page</h2>
+
+	<h3>Enter your details to register</h3>
+
+	<form action="#" th:action="@{/registration}" th:object="${userModel}"
+		method="POST">
+		<table>
+			<tr>
+				<td>Name:</td>
+				<td><input type="text" th:field="*{name}" /></td>
+			</tr>
+			<tr>
+				<td>Email:</td>
+				<td><input type="text" th:field="*{email}" />
+				</td>
+				</tr>
+			<tr>
+				<td>Username:</td>
+				<td><input type="text" th:field="*{userId}" /></td>
+				</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type="password" th:field="*{password}" /></td>
+				</tr>
+			<tr>
+				<td><img th:src="@{http://localhost:8080/captchaServlet}"></td>
+				<td><input type="text" name="code"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Register"></input>
+				&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="Reset"></input></td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>

@@ -2,60 +2,48 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Account update page</title>
+<title>Account Update Page</title>
 <h2>Update Password</h2>
+</head>
+<body>
 <table>
-
-	<thead>Menu
-	</thead>
-	<br>
+	<thead>Menu</thead>
+	<br/>
 	<tr>
 		<a th:href="@{/logout}">logout</a>
 	</tr>
-	<br>
+	<br/>
 	<tr>
 		<a th:href="@{/update}">Account update</a>
 	</tr>
 	<br>
-	<form action="#" th:action="@{/update}" th:object="${userModel}"
-		method="post">
+	<form action="#" th:action="@{/update}" th:object="${userModel}" method="post">
+	
 		<tr>
-			<p>
-				Name: <input type="text" th:field="*{name}" />
+			<td>Name:</td>
+			<td><input type="text" th:field="*{name}" /></td>
 		</tr>
-		</p>
 		<tr>
-			<p>
-				Email ID: <input type="text" th:field="*{email}" />
-			</p>
+			<td>Email ID:</td>
+			<td><input type="text" th:field="*{email}" /></td>
 		</tr>
-
 		<tr>
-			Username:
-			<input type="text" value="Enter username" th:field="*{userId}" />
+			<td>Username:</td>
+			<td><input type="text" value="Enter username" th:field="*{userId}" /></td>
 		</tr>
-		<p></p>
 		<tr>
-			Password:
-			<input type="password" value="Enter password" th:field="*{password}" />
+			<td>Password:</td>
+			<td><input type="password" value="Enter password" th:field="*{password}" /></td>
 		</tr>
-		<p></p>
 		<tr>
-			Re-enter Password:
-			<input type="password" value="Re-Enter password"
-				th:field="*{password}" />
+			<td>Re-enter Password:</td>
+			<td><input type="password" value="Re-Enter password" th:field="*{password}" /></td>
 		</tr>
-		<p></p>
-
-		<input type="submit" value="Update"></input>
-		<p></p>
+		<tr>
+			<td colspan="2"><input type="submit" value="Update"></input></td>
+		</tr>
 
 	</form>
 </table>
-
-</head>
-<body>
-
-	<!-- <p th:text="'id: ' + ${greeting.id}" />-->
 </body>
 </html>

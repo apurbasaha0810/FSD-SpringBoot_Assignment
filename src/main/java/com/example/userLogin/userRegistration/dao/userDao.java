@@ -34,8 +34,6 @@ public class userDao implements userOperations {
         Transaction tx = session.beginTransaction();
         session.update(user);
         tx.commit();
-
-
     }
 
 }

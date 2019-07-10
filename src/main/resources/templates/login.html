@@ -10,10 +10,11 @@
   <h2>Login</h2>
   <table>
       <form action="#" th:action="@{/admin}" th:object="${userModel}" method="post">
-          <tr> Username: <input type="text" value="Enter username" th:field="*{userId}"/> </tr><p></p>
-          <tr> Password: <input type="password" value="Enter password" th:field="*{password}"/> </tr><p></p>
-          <input type="submit" value="Submit"></input>
-          <input type="reset" value="Reset"></input>
+          <tr><td>Username:</td> <td><input type="text" value="Enter username" th:field="*{userId}"/></td></tr><p></p>
+          <tr><td>Password:</td> <td><input type="password" value="Enter password" th:field="*{password}"/></td></tr><p></p>
+          <tr><td colspan="2"><br/></td></tr>
+          <tr><td colspan="2"><input type="submit" value="Submit"></input>&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="reset" value="Reset"></input></td></tr>
       </form>
   </table>
 
