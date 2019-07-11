@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Account Update Page</title>
-<h2>Update Password</h2>
+<h2>Update Account Details</h2>
 </head>
 <body>
 <table>
@@ -13,10 +13,6 @@
 		<a th:href="@{/logout}">logout</a>
 	</tr>
 	<br/>
-	<tr>
-		<a th:href="@{/update}">Account update</a>
-	</tr>
-	<br>
 	<form action="#" th:action="@{/update}" th:object="${userModel}" method="post">
 	
 		<tr>

@@ -32,9 +32,6 @@ public class UserModel {
     @Column(name="USER_NAME")
     private String name;
 
-    @Column(name="AGE")
-    private int age;
-
     @Column(name="EMAIL")
     private String email;
 

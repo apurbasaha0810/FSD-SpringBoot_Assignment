@@ -101,7 +101,7 @@ public class FormController {
 		userDao userDao = new userDao(session);
 
 		userDao.getUserById(user.getUserId());
-		return "accountUpdate";
+		return "loginSuccess";
 	}
 
 	@PostMapping("/update")
@@ -116,7 +116,7 @@ public class FormController {
 		// userDao.getUserById(user.getUserId());
 		userDao.updatePassword(user);
 
-		return "Updated";
+		return "updated";
 	}
 
 }
